@@ -1,0 +1,405 @@
+/* -------------------- RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* -------------------- BODY -------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #ffffff; /* fond blanc pour toute la page */
+  min-height: 100vh; /* garantit que le body prend toute la hauteur */
+}
+
+
+/* -------------------- HEADER / HERO -------------------- */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  margin-bottom: 1rem;
+}
+
+header nav {
+  margin-top: 1rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- SECTIONS -------------------- */
+section {
+  padding: 4rem 2rem;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Fond alterné pour certaines sections */
+.alt-bg {
+  background: #e9ecef;
+}
+
+/* Titres de section */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* -------------------- PROJETS -------------------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Nouveau : fond blanc pour toute la section Projects */
+.projects-section {
+  background: #fff;
+  padding: 3rem 1rem; /* espace autour de la section */
+}
+
+/* Nouveau : le lien qui englobe toute la carte */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.project h3 {
+  margin-bottom: 0.8rem;
+  color: #2575fc;
+}
+
+/* -------------------- IMAGES DES PROJETS -------------------- */
+
+/* -------------------- MARKOWITZ -----------------*/
+.project-image {
+  display: grid;
+  grid-template-rows: auto auto auto; /* première image / trois images / dernière image */
+  justify-items: center; /* centre les images horizontalement */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Première image */
+.project-image img:nth-child(1) {
+  width: 90%;
+  height: auto;
+}
+
+/* Conteneur des trois images du milieu */
+.project-image .middle-row {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  gap: 1rem; /* espace entre les images */
+  width: 100%;
+}
+
+/* Trois images identiques */
+.project-image .middle-row img {
+  width: 33%;
+  height: auto;
+}
+
+.project-image .last-image {
+  width: 25%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* -------------------- IMAGES DIGITS -------------------- */
+.project-image-digits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centre les images par rapport au titre de la section */
+  gap: 2rem;            /* espace entre les images */
+  margin-top: 1.5rem;   /* espace entre les bullets et la première image */
+}
+
+.digit-item {
+  display: flex;
+  align-items: center;  /* aligne titre et image verticalement */
+  gap: 1rem;            /* espace entre titre et image */
+  width: 100%;          /* occupe toute la largeur de la section */
+  max-width: 700px;     /* limite la largeur pour ne pas dépasser */
+}
+
+.digit-title {
+  flex: 0 0 120px;      /* largeur fixe pour le titre à gauche */
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.digit-item img {
+  width: 60%;           /* adapte la taille des images */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+
+
+
+
+/* -------------------- SKILLS -------------------- */
+.skills-section {
+  background: #fff;        /* Fond blanc */
+  padding: 3rem 1rem;      /* Espace autour */
+  border-radius: 10px;     /* Coins arrondis (optionnel) */
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.05); /* Optionnel : légère ombre */
+}
+
+.skills-category {
+  text-align: center;      
+  margin-bottom: 3rem;     
+}
+
+.skills-category h3 {
+  font-size: 1.8rem;       
+  margin-bottom: 1.5rem;   
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;         
+  justify-content: center; 
+  gap: 2rem;               
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill img {
+  width: 60px;             /* Taille uniforme des icônes */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;   /* Espace avec le texte */
+}
+
+.skill p {
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* -------------------- HERO CONTENT (Accueil) -------------------- */
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: white;
+  color: #2575fc;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* -------------------- FOOTER -------------------- */
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Icônes cliquables (LinkedIn, HackerRank) */
+.footer-contact a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.footer-contact a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px; /* bords arrondis style iPhone */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-contact a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Tooltip pour email et téléphone */
+.footer-contact .tooltip {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer-contact .tooltip img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px; /* bords arrondis style iPhone */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-contact .tooltip:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Texte du tooltip */
+.footer-contact .tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+
+  position: absolute;
+  bottom: 120%; /* au-dessus de l’icône */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.footer-contact .tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Footer général */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #fff;          /* Fond blanc */
+  color: #333;               /* Texte gris foncé */
+  margin-top: auto;          /* Pousse le footer vers le bas */
+  border-top: 1px solid #ddd; /* Ligne fine pour séparer */
+}
+
+
+/* Assurer que le body occupe toute la hauteur */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body > *:not(footer) {
+  flex-shrink: 0;
+}
+
+
+/* -------------------- PROJETS CLIQUABLES -------------------- */
+.project {
+  cursor: pointer; /* montre que tout le rectangle est cliquable */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Toggle details avec animation */
+.project-details {
+  display: none;
+  margin-top: 1rem;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.project-details.show {
+  display: block;
+  max-height: 1000px; /* assez grand pour tout le contenu */
+  opacity: 1;
+}
+
+.project-details img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
