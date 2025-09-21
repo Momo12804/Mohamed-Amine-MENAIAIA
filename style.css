@@ -368,7 +368,7 @@ body > *:not(footer) {
 .project:hover {
   transform: translateY(-5px);
   box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-  background: #121212; /* fond gris/noir au survol */
+  background: #ffffff; /* fond gris/blanc au survol */
 }
 
 /* Toggle details avec animation */
